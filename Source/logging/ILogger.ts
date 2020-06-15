@@ -32,10 +32,10 @@ export interface ILogger {
     error(message: string): void;
 
     /**
-     * Logs the message
+     * Logs the info message
      *
      * @param {string} message
      */
-    log(message: string): void
+    info(message: string): void
 
 }

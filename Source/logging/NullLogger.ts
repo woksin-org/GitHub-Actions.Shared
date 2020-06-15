@@ -12,13 +12,29 @@ import { ILogger } from './ILogger';
  * @implements {ILogger}
  */
 export class NullLogger implements ILogger {
+
     // tslint:disable-next-line: no-empty
+    /**
+     * @inheritdoc
+     */
     debug(message: string) { }
+
     // tslint:disable-next-line: no-empty
+    /**
+     * @inheritdoc
+     */
     warning(message: string) { }
+
     // tslint:disable-next-line: no-empty
+    /**
+     * @inheritdoc
+     */
     error(message: string) { }
+
     // tslint:disable-next-line: no-empty
-    log(message: string) { }
+    /**
+     * @inheritdoc
+     */
+    info(message: string) { }
 
 }

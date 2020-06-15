@@ -14,20 +14,31 @@ import * as core from '@actions/core';
  */
 export class Logger implements ILogger {
 
+    /**
+     * @inheritdoc
+     */
     debug(message: string) {
         core.debug(message);
     }
 
+    /**
+     * @inheritdoc
+     */
     warning(message: string) {
         core.warning(message);
     }
 
+    /**
+     * @inheritdoc
+     */
     error(message: string) {
         core.error(message);
     }
 
-    log(message: string) {
-        console.log(message);
+    /**
+     * @inheritdoc
+     */
+    info(message: string) {
+        core.info(message);
     }
-
 }
