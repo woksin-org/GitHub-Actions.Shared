@@ -1,0 +1,14 @@
+{
+  "name": "Github JavaScript Actions CI Workflow",
+  "description": "CI Workflow template for Dolittle's JavaScript Github Actions",
+  "iconName": "dolittle-icon",
+  "categories": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "filePatterns": [
+    "package.json$",
+    "action.yml$",
+    "action.yaml$"
+  ]
+}
