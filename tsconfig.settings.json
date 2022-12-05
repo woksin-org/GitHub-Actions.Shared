@@ -1,7 +1,12 @@
 {
-    "extends": "./node_modules/@dolittle/typescript.build/TSConfig/tsconfig.base.json",
+    "extends": "@dolittle/typescript.config",
     "compilerOptions": {
-        "target": "es2017",
+        "target": "ES2017",
+        "downlevelIteration": true,
+        "inlineSourceMap": true,
+        "sourceMap": false,
+        "declarationMap": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     }
-  }
-  
+}

@@ -4,6 +4,17 @@
     "Source/*"
   ],
   "scripts": {
+    "prebuild": "yarn clean",
+    "postbuild": "yarn lint",
+    "build": "tsc -b Source/tsconfig.json",
+    "clean": "tsc -b Source/tsconfig.json --clean",
+    "test": "TS_NODE_PROJECT=tsconfig.settings.json mocha",
+    "test:clean": "rimraf **/Distribution/**/for_*",
+    "lint": "eslint --quiet --ext .ts ./",
+    "lint:fix": "eslint --quiet --ext .ts ./ --fix",
+    "ci": "yarn build && yarn test && yarn test:clean"
+  },
+  "scripts2": {
     "tasks": "gulp --tasks --gulpfile node_modules/@dolittle/typescript.build/Gulpfile.js",
     "clean": "gulp clean --gulpfile node_modules/@dolittle/typescript.build/Gulpfile.js",
     "build": "gulp build --gulpfile node_modules/@dolittle/typescript.build/Gulpfile.js",
@@ -12,6 +23,7 @@
     "test:clean": "gulp test-clean --gulpfile node_modules/@dolittle/typescript.build/Gulpfile.js"
   },
   "devDependencies": {
-    "@dolittle/typescript.build": "^5.3.6"
+    "@dolittle/typescript.build": "6.0.3",
+    "rimraf": "3.0.2"
   }
 }
