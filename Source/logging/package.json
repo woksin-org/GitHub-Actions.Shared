@@ -17,7 +17,8 @@
         "node": ">=16.0.0"
     },
     "files": [
-        "Distribution"
+        "Distribution",
+        "*.ts"
     ],
     "main": "Distribution/index.js",
     "types": "Distribution/index.d.ts",
