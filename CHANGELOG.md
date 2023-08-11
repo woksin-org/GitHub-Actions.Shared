@@ -1,3 +1,9 @@
+# [1.1.3] - 2023-8-11 [PR: #2](https://github.com/woksin-org/GitHub-Actions.Shared/pull/2)
+## Summary
+
+Include all .ts files
+
+
 # [1.1.2] - 2023-8-11 [PR: #1](https://github.com/woksin-org/GitHub-Actions.Shared/pull/1)
 # Summary
 
