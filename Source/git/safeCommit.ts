@@ -74,6 +74,7 @@ async function safePush(remote: string, branch: string, pushRetries: number, log
         try {
             await runGitCommand(`pull ${remote} ${branch}`, undefined, false);
             await runGitCommand(`push ${remote} ${branch}`, undefined, false);
+            return;
         } catch (err) {
             pushRetries -= 1;
             if (pushRetries <= 0) {
