@@ -1,0 +1,1 @@
+export { SafeCommitOptions, safeCommitAndPush } from './safeCommit';
