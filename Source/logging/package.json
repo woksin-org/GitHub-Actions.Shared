@@ -1,6 +1,6 @@
 {
     "name": "@woksin/github-actions.shared.logging",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Shared package for logging",
     "publishConfig": {
         "access": "public"
