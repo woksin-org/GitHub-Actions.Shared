@@ -1,3 +1,9 @@
+# [1.2.1] - 2023-9-18 [PR: #4](https://github.com/woksin-org/GitHub-Actions.Shared/pull/4)
+### Fixed
+
+- Actually exit loop
+
+
 # [1.2.0] - 2023-9-18 [PR: #3](https://github.com/woksin-org/GitHub-Actions.Shared/pull/3)
 ## Summary
 
