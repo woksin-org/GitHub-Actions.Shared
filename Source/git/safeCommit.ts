@@ -1,6 +1,6 @@
 import { exec } from '@actions/exec';
 import { ILogger } from '@woksin/github-actions.shared.logging';
-
+import { setTimeout } from 'timers';
 /**
  * Represents the options for safeCommitAndPush.
  */
@@ -80,7 +80,13 @@ async function safePush(remote: string, branch: string, pushRetries: number, log
                 logger.error(`Failed to push commit. error: ${err}`);
                 throw err;
             } else {
+                let timeToWaitMs = Math.random() * 10_000 | 0;
+                while (timeToWaitMs < 1000) {
+                    timeToWaitMs *= 10;
+                }
                 logger.warning(`Pushing commit failed. ${pushRetries} attempts remaining. error: ${err}`);
+                logger.info(`Trying too push again after ${timeToWaitMs} milliseconds`);
+                await new Promise(resolve => setTimeout(resolve, timeToWaitMs));
             }
         }
     } while (pushRetries > 0);
